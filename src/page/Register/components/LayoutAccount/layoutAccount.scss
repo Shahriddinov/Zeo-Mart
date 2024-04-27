@@ -1,0 +1,54 @@
+.LayoutAccount{
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  .df{
+    display: flex;
+    justify-content: space-between;
+  }
+  &_layoutLeft{
+    width: 25%;
+    height: auto;
+    //border: 1px solid red;
+    &_avatar{
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #dedddd;
+      padding-bottom: 20px;
+      gap: 10px;
+      &_Aimg{
+        width: 40px;
+        height: 40px;
+      }
+      &_userN{
+        display: grid;
+        flex-direction: column;
+        font-weight: 500;
+      }
+    }
+    &_menuList{
+
+      margin-top: 15px;
+      align-items: center;
+      font-style: normal;
+      font-size: 15px;
+      font-weight: 500;
+
+      &_li{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 15px;
+        color: #041e42;
+        margin-bottom: 15px;
+        &_users{
+          width: 25px;
+        }
+      }
+    }
+  }
+  &_layoutRight{
+    width: 70%;
+    height: auto;
+  }
+}

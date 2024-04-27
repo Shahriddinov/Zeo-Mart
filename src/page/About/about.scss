@@ -1,0 +1,208 @@
+.about {
+  width: 100%;
+  height: auto;
+  //background: #443297;
+  display: grid;
+  justify-content: center;
+
+  &_lines1 {
+    display: inline-flex;
+    gap: 10px;
+
+    &_lines {
+
+      &::before {
+        float: left;
+        padding-right: .5rem;
+        color: #6c757d;
+        content: var(--bs-breadcrumb-divider, "/");
+      }
+    }
+
+  }
+
+  &_imgCard {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    &_boxesAbout {
+      width: 24%;
+      height: 465px;
+      border-radius: 6px;
+
+      &_imgIn {
+        width: 100%;
+        height: 47%;
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+  &_information {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 60px;
+
+    &_stores {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 40px;
+      letter-spacing: 0em;
+      margin-bottom: 30px;
+    }
+
+    &_content {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 35px;
+      letter-spacing: 0em;
+      margin-bottom: 30px;
+    }
+
+    &_p {
+      color: #041E42;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0em;
+    }
+
+    &_mission {
+      width: 100%;
+      display: flex;
+      margin-top: 30px;
+
+      justify-content: space-between;
+
+      &_version {
+        width: 48%;
+
+        &_titleVersion {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 29px;
+          letter-spacing: 0em;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &_users {
+      &_numbers {
+        display: flex;
+        justify-content: space-between;
+
+        &_NumCard {
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          color: #041E42;
+          font-size: 50px;
+          font-weight: 500;
+          line-height: 72px;
+          letter-spacing: 0em;
+        }
+      }
+    }
+
+    &_teams {
+      width: 100%;
+      height: 327px;
+      display: flex;
+      justify-content: space-between;
+
+      .team_member {
+        background-color: #ffffff;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        position: relative;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+      }
+
+      .team_member .thumb {
+        height: 327px;
+        border-radius: 6px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .team_member .thumb .overylay {
+        content: "";
+        background-color: rgba(245, 195, 75, 0.9);
+        bottom: 0;
+        opacity: 0;
+        height: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        visibility: hidden;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+      }
+
+      .team_member:hover .thumb .overylay {
+        height: 100%;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .team_member .thumb .overylay .social_icon {
+        bottom: 0;
+        left: 0;
+        margin-bottom: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.4s ease-out 0s;
+        -moz-transition: all 0.4s ease-out 0s;
+        -o-transition: all 0.4s ease-out 0s;
+        transition: all 0.4s ease-out 0s;
+      }
+
+      .team_member:hover .thumb .overylay .social_icon {
+        bottom: 40%;
+        display: flex;
+        justify-content: center;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .team_member .thumb .overylay .social_icon li {
+        margin-right: 20px;
+      }
+
+      .team_member .thumb .overylay .social_icon li:last-child {
+        margin-right: 0;
+      }
+
+      .team_member .thumb .overylay .social_icon li a i {
+        color: #041e42;
+        font-size: 14px;
+      }
+
+      .team_member .details {
+        padding: 25px 0 0;
+      }
+
+      .team_member .details p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

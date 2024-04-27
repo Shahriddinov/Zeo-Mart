@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
+  list-style: none;
+
+}
+
+$header_color: #443297;
+$button_color: #f5c34b;
+
+.container {
+  width: 1440px !important;
+  padding: 15px 30px;
+
+}
+
+a {
+  text-decoration: none;
+  color: #626974;
+}
+
+.hoverButton {
+  background-color: #f5c34b;
+  border: 1px solid #f5c34b;
+  color: #041e42;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  padding: 10px 35px;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+  &:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+                    120deg,
+                    rgba(255, 255, 255, 0) 30%,
+                    rgba(255, 255, 255, 0.8),
+                    rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+
+    60% {
+      left: 100%;
+    }
+
+    to {
+      left: 100%;
+    }
+  }
+
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0em;
+}
+
+.littleTitle {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+}
+
+.all {
+  color: #626974 !important;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  gap: 20px;
+
+  //&_a:before {
+  //  background-color: #041e42;
+  //  bottom: -8px;
+  //  content: "";
+  //  height: 2px;
+  //  left: 0;
+  //  position: absolute;
+  //  width: 32%;
+  //  -webkit-transition: all 0.3s ease;
+  //  -o-transition: all 0.3s ease;
+  //  transition: all 0.3s ease;
+  //}
+  //
+  //&_a:hover:before {
+  //  width: 100%;
+  //}
+  &_a:focus {
+    color: #041e42;
+    border-bottom: 2px solid #041e42;
+  }
+}
+

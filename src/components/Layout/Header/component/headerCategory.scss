@@ -1,0 +1,114 @@
+@import "src/assets/style/global";
+
+.HeaderCategory {
+  &_box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    &_titles {
+      width: 45%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &_drop{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        background: $header_color;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        &:hover{
+          color: white!important;
+          border-color: white!important;
+        }
+        &_hover{
+          &:hover{
+            color: $button_color!important;
+            border-color: $button_color!important;
+
+          }
+        }
+        &_lin{
+          position: relative;
+
+          &_lines{
+            background-color: rgba(255, 255, 255, 0.1);
+            content: "";
+            height: 30px;
+            position: absolute;
+            right: 0;
+            //right: -20px;
+            top: 0px;
+            width: 1px;
+          }
+        }
+
+      }
+
+    }
+    &_right{
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &_text{
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        &:hover{
+          color: $button_color!important;
+          border-color: $button_color!important;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+}
+
+.line {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.menu_inside{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #041e42;
+}
+
+.ant-dropdown-menu {
+  width: 100% !important;
+  display: flex;
+  gap: 80px;
+  padding: 20px!important;
+}
+.ant-dropdown-menu-item-active{
+  background-color: transparent!important;
+}
+.ant-dropdown-menu-item:hover {
+  background-color: #f5f5f5!important; /* Hover background color */
+  color: #1890ff!important; /* Hover text color */
+}
+
+.MenuName{
+  color: #041e42!important;
+  font-size: 18px!important;
+  display: block!important;
+  margin-bottom: 12px!important;
+  text-transform: capitalize!important;
+  padding: 0 12px !important;
+  font-weight: 500!important;
+}
+.menu_style{
+  font-weight: 400!important;
+  font-size: 16px;
+  padding:  3px 0;
+  display: block;
+  color: #041e42;
+}

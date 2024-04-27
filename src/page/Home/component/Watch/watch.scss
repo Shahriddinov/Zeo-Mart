@@ -1,0 +1,49 @@
+.watch {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  &_banner {
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-image: url("../../../../assets/images/banner1.jpg");
+
+    &_banTitle {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: left;
+      padding: 8%;
+      &_titles {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 72px;
+        letter-spacing: 0em;
+      }
+      &_para{
+        color: #041e42;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 23px;
+        letter-spacing: 0em;
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
+    }
+    &_widget{
+      position: relative;
+
+      //&_animation:hover{
+      //  transform: perspective(500px) translateZ(0px) rotateX(-1.43676deg) rotateY(-3.23918deg);
+      //  transition: none 0s ease 0s;
+      //}
+    }
+  }
+}

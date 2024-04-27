@@ -1,0 +1,51 @@
+.help {
+  width: 100%;
+  height: auto;
+  //background: #443297;
+  display: grid;
+  justify-content: center;
+  &_lines1 {
+    display: inline-flex;
+    gap: 10px;
+
+    &_lines {
+      &::before {
+        float: left;
+        padding-right: 0.5rem;
+        color: #6c757d;
+        content: var(--bs-breadcrumb-divider, "/");
+      }
+    }
+  }
+  &_customerHelp {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    color: #041e42;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0em;
+    margin-bottom: 25px;
+  }
+  &_footerInput {
+    width: 50vw;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+
+    &_Ints {
+      width: 100%;
+      background-color: #fff;
+      border: 1px solid #eaeaea;
+      border-radius: 6px;
+      color: #041e42;
+      height: 60px;
+      outline: none;
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.partner{
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  flex-direction: column;
+&_partnerTitle{
+  line-height: 1.4;
+  color: #041e42;
+  font-weight: 500;
+  font-style: 16px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+}

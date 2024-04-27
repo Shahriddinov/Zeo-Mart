@@ -1,0 +1,72 @@
+@import "src/assets/style/global";
+
+.products {
+display: grid;
+  justify-content: center;
+  &_view {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+
+    &_time {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+
+      &_main {
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: 0em;
+
+      }
+    }
+
+    &_all {
+      color: #041e42;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0em;
+      position: relative;
+      cursor: pointer;
+
+      &_a:before {
+        background-color: #041e42;
+        bottom: -8px;
+        content: "";
+        height: 2px;
+        left: 0;
+        position: absolute;
+        width: 32%;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+
+      }
+
+      &_a:hover:before {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+.seconds,
+.minutes,
+.hours,
+.days {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 40px;
+
+}
+
+.days {
+  color: $button_color;
+
+}

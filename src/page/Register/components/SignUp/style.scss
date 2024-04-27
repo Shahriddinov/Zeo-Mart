@@ -1,0 +1,106 @@
+
+.ModalHeader {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    line-height: 29px;
+
+    &_buttons {
+      background-color: #F3F5F6;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #041E42;
+      font-size: 10px;
+      height: 40px;
+      line-height: 40px;
+      position: absolute;
+      right: 20px;
+      text-align: center;
+      width: 40px;
+      display: flex;
+      border: none;
+      justify-content: center;
+      align-items: center;
+
+
+    }
+    &_formMod{
+      display: flex;
+      padding: 0 15px;
+      flex-direction: column;
+      margin: 0 auto;
+      margin-top: 40px;
+      &_modLabel{
+        float: left;
+        display: flex;
+        flex-direction: column;
+        color: #041e42;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        &_modInput {
+          width: 100%;
+          background-color: #ffffff;
+          border: 1px solid #eaeaea;
+          border-radius: 6px;
+          color: #626974;
+          font-size: 15px;
+          height: 55px;
+          margin-bottom: 20px;
+          padding: 0 15px;
+          margin-top: 10px;
+          &:focus{
+            outline: none;
+          }
+        }
+      }
+      &_check{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_checkbox{
+          display: flex;
+          gap: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+    &_account{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      color: #041e42;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0em;
+      &_del{
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+      }
+    }
+  }
+
+.registerCard{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 40%;
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  box-shadow: 0px 10px 50px rgba(4, 30, 66, 0.05);
+  border-radius: 6px;
+  padding: 40px;
+  margin-top: 40px;
+}
+.ReactModal__Overlay,
+.ReactModal__Overlay--after-open {
+  z-index: 999 !important;
+  //margin-top:  !important;
+}

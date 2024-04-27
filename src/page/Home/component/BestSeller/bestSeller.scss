@@ -1,0 +1,53 @@
+@import "src/assets/style/global";
+
+.BestSeller {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &_bestTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_sub {
+      display: flex;
+
+      gap: 20px;
+    }
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }.swiper-slide{
+       margin-right: 0!important;
+     }
+  .swiper-button-prev,
+  .swiper-button-next{
+    width: 50px;
+    height: 50px;
+    background: #d0cfcf;
+    border-radius: 50%;
+    font-size: 12px;
+    background-size: 12px;
+
+    &:after{
+      font-size: 15px;
+      color: #041e42;
+    }
+  }
+
+  
+}

@@ -1,0 +1,26 @@
+.AllProductButton{
+  display: flex;
+  justify-content: center;
+  &_linkBut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_swi{
+      border: 2px solid #eaeaea;
+      border-radius: 60px;
+      height: 60px;
+      line-height: 55px;
+      padding: 0 30px;
+      width: auto;
+      color: #041e42;
+
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0em;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+}

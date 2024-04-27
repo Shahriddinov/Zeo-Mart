@@ -1,0 +1,100 @@
+.Order{
+  &_otitle{
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    color: #041e42;
+  }
+  &_searchInput{
+    width: 100%;
+    //border: 2px solid black;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    background: #e4ecf6;
+    border-radius: 18px;
+    &_IconSearch{
+      width: 18px;
+      height: 18px;
+      color: white;
+    }
+    &_writes{
+      width: 100%;
+      border-radius: 18px;
+
+      padding: 10px;
+      border: none;
+      outline: none;
+      color: white;
+      background: #e4ecf6;
+      color: #041E42;
+
+      font-size: 18px;
+      font-weight: normal;
+      opacity: 0.8;
+      &::placeholder {
+        color:  #041E42;
+
+        font-size: 18px;
+        font-weight: normal;
+        opacity: 0.8;
+      }
+    }
+  }
+  &_card{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    &_flex{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &_colors{
+      display: flex;
+      margin-top: 10px;
+      align-items: center;
+      gap: 10px;
+      &_reds{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: rgb(213, 74, 82);
+      }
+    }
+    &_orderProduct{
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      justify-content: space-between;
+      &_allP{
+        width: 70%;
+        display: flex;
+        gap: 15px;
+        &_PImg{
+          width: 100px;
+          height: 145px;
+        }
+      &_PName{
+        color: #222;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        margin-top: 40px;
+        line-height: normal;
+      }
+      }
+      &_Pprice{
+        width: 25%;
+
+        &_fl{
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

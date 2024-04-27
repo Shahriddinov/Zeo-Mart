@@ -1,0 +1,365 @@
+@import "src/assets/style/global";
+
+.saleProduct {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &_sales {
+    display: flex;
+
+
+    &_salesLeft {
+      width: 30%;
+
+      &_lined {
+        margin-top: 20px;
+        border: 2px solid #041e42;
+        border-radius: 6px;
+        padding: 20px;
+        padding-bottom: 10px;
+
+        &_Caruosel {
+          &_sliders {
+
+            height: 520px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+
+            .saved {
+              position: absolute;
+              top: 0;
+              right: 5px;
+              display: grid;
+              display: none;
+
+              &_icons {
+                width: 34px;
+                height: 34px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background: white;
+                margin-top: 5px;
+                cursor: pointer;
+
+                &:hover {
+                  background: $button_color;
+                }
+
+                &_ic {
+                  width: 14px;
+                }
+              }
+            }
+
+            .send {
+              position: absolute;
+              top: 45%;
+              width: 86%;
+              z-index: 1;
+              height: 52px;
+              line-height: 40px;
+              background-color: #f5c34b;
+              border: 1px solid #f5c34b;
+              box-shadow: 0px 5px 20px rgba(245, 195, 75, 0.15);
+              border-radius: 6px;
+              font-size: 15px;
+              font-weight: 500;
+              cursor: pointer;
+              display: none;
+              letter-spacing: 0em;
+
+
+            }
+
+            &:hover {
+              .saved {
+                display: grid;
+              }
+
+              .send {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+
+            &_subTitle {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 13px;
+              line-height: 22px;
+              margin-bottom: 8px;
+              color: #917780;
+              padding: 0;
+              display: flex !important;
+              justify-content: left !important;
+              text-transform: uppercase;
+              margin-top: 40px;
+              overflow: hidden;
+            }
+
+            &_titleModel {
+              //width: 0%;
+              color: #041e42;
+              font-style: normal;
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 28px;
+              letter-spacing: 0em;
+              display: flex !important;
+              text-align: left;
+              justify-content: left !important;
+              transition: all 0.5s ease;
+              text-decoration: none;
+              margin-top: 20px;
+            }
+
+            &_star {
+              margin-top: 10px;
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              color: #555555;
+              font-size: 12px;
+              cursor: pointer;
+              margin-bottom: 5px;
+
+            }
+
+            &_price {
+              margin-top: 10px;
+              color: #041e42;
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 26px;
+              letter-spacing: 0em;
+              display: flex !important;
+              align-items: baseline;
+              text-align: left;
+              margin-bottom: 5px;
+
+              small {
+                color: #626974;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 22px;
+                letter-spacing: 0em;
+                text-align: center;
+              }
+            }
+
+            &_line {
+              background-color: #f3f5f6;
+              border-radius: 6px;
+              height: 6px;
+              position: relative;
+              width: 90%;
+              margin-top: 10px;
+
+              &_goldLine {
+                background-color: #f5c34b;
+                border-radius: 6px;
+                content: "";
+                height: 6px;
+                left: 0;
+                position: absolute;
+                width: 50%;
+              }
+            }
+
+            &_sell {
+              color: #041e42;
+              margin-top: 10px;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 22px;
+              text-align: left;
+            }
+          }
+
+        }
+      }
+    }
+
+    &_bestTitle {
+      width: 70%;
+
+      &_dev {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_sub {
+          display: flex;
+
+          gap: 20px;
+        }
+      }
+      &_Caruosel {
+        &_sliders {
+          margin-top: 30px;
+
+          padding: 15px;
+          height: 400px;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          align-items: center;
+          justify-content: space-between;
+
+          .saved {
+            position: absolute;
+            top: 0;
+            right: 5px;
+            display: grid;
+            display: none;
+
+            &_icons {
+              width: 34px;
+              height: 34px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+              background: white;
+              margin-top: 5px;
+              cursor: pointer;
+
+              &:hover {
+                background: $button_color;
+              }
+
+              &_ic {
+                width: 14px;
+              }
+            }
+          }
+
+          .send {
+            position: absolute;
+            top: 40%;
+            width: 86%;
+            z-index: 1;
+            height: 52px;
+            line-height: 40px;
+            background-color: #f5c34b;
+            border: 1px solid #f5c34b;
+            box-shadow: 0px 5px 20px rgba(245, 195, 75, 0.15);
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            display: none;
+            letter-spacing: 0em;
+
+
+          }
+
+          &:hover {
+            .saved {
+              display: grid;
+            }
+
+            .send {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+
+          &_subTitle {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 22px;
+            margin-bottom: 8px;
+            color: #917780;
+            padding: 0;
+            display: flex !important;
+            justify-content: left !important;
+            text-transform: uppercase;
+            overflow: hidden;
+          }
+
+          &_titleModel {
+            width: 80%;
+            color: #041e42;
+            font-style: normal;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 28px;
+            letter-spacing: 0em;
+            display: flex !important;
+            text-align: left;
+            justify-content: left !important;
+            transition: all 0.5s ease;
+            text-decoration: none;
+          }
+
+          &_star {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #555555;
+            font-size: 12px;
+            cursor: pointer;
+            margin-bottom: 5px;
+
+          }
+          &_price{
+            color: #041e42;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+            letter-spacing: 0em;
+            display: flex !important;
+            align-items: baseline;
+            text-align: left;
+            margin-bottom: 5px;
+            small{
+              color: #626974;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 22px;
+              letter-spacing: 0em;
+              text-align: center;
+            }
+          }
+          &_line{
+            background-color: #f3f5f6;
+            border-radius: 6px;
+            height: 6px;
+            position: relative;
+            width: 90%;
+            margin-top: 10px;
+            &_goldLine{
+              background-color: #f5c34b;
+              border-radius: 6px;
+              content: "";
+              height: 6px;
+              left: 0;
+              position: absolute;
+              width: 50%;
+            }
+          }
+          &_sell{
+            color: #041e42;
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            text-align: left;
+          }
+        }
+
+      }
+    }
+
+  }
+}

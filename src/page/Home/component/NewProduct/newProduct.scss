@@ -1,0 +1,35 @@
+.newProduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_newCard {
+    display: flex;
+    justify-content: space-between;
+    &_newBox {
+      width: 34%;
+      border: 1px solid #ebebeb;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &_newTitle {
+        color: #041e42;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0em;
+
+        &_boxText {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 22px;
+          letter-spacing: 0em;
+          color: #443297 !important;
+        }
+      }
+
+    }
+
+  }
+}
