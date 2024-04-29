@@ -59,5 +59,38 @@
      }
    }
   }
+  .input-wrapper {
+    --padding: 16px;
+    --focus-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
 
+  .inputs {
+    width: 100%;
+    padding: var(--padding);
+    border: 2px solid gray;
+    outline: none;
+    border-radius: 6px;
+  }
+  .placeholder {
+    position: absolute;
+    background-color: white;
+    color: gray;
+    left: var(--padding);
+    padding: 0 4px;
+    transition: all 0.2s ease-in;
+  }
+
+  .inputs:is(:focus, :valid) {
+    border: 2px solid var(--focus-color);
+  }
+
+  .inputs:is(:focus, :valid) + .placeholder {
+    transform: translatey(calc(-1 * var(--padding) - 12px));
+    font-size: 14px;
+    color: var(--focus-color);
+  }
 }

@@ -12,6 +12,7 @@ const home2 = lazy(() => import("./page/MarketPlace/marketPlace"));
 const Brands = lazy(()=> import("./page/Brands/brands"));
 const Contact = lazy(()=>import("./page/Contact/contact"))
 const NotFound = lazy(() => import("./page/404"));
+const FAQ = lazy(() => import("./page/Faq/faq"));
 const Account = lazy(() => import("./page/Register/Update"));
 const Update = lazy(() => import("./page/Register/components/UserInfoUpdate/userInfoUpdate"));
 const Order = lazy(() => import("./page/Register/components/Order/order"));
@@ -27,6 +28,7 @@ const routes = [
     {path: "/brands", element: Brands},
     {path: "/contact", element: Contact},
     {path: "/help", element: Help},
+    {path: "/faq", element: FAQ},
     {path: "/account", element: Account},
     {path: "/profile", element: Update},
     {path: "/profile/order", element: Order},
