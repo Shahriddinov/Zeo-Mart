@@ -1,70 +1,31 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
-    // recoverPassword,
     registerUser,
-    // resetPassword,
-    // sendEmail,
-    // setPassword,
-    // signIn,
-    // verifyToken,
+    
 } from "./extraReducer";
-import { getItem, removeItem, setItem } from "../../helpers/persistanceStorage";
 
 
 const initialState = {
-    emailLoading: false,
-    verifyLoading: true,
-    passwordLoading: true,
-    loginLoading: true,
-    resetLoading: false,
-    registerLoading: false,
-    registerData: getItem("user") ? JSON.parse(getItem("user")) : null,
-    registerSuccess: null,
-    userData: getItem("user") ? JSON.parse(getItem("user")) : null,
-    nationsData: null,
-    nationsLoading: true,
-    countriesData: null,
-    countriesLoading: false,
-    token: localStorage.getItem("token") ? localStorage.getItem("token") : null,
-    message: "",
-    tokenMessage: null,
-    success: false,
-    error: null,
+  user: null,
+  loading: false,
+  error: null,
+  registrationStatus: 'idle',
+  registrationResponse: null,
+  verificationStatus: null,
+  verifyCode:null,
+  smsRequestTime: null
 };
 
 const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
-        // loginUser: (state, { payload }) => {
-        //     const { user, navigate } = payload;
-        //     state.token = user.token;
-        //     localStorage.setItem("token", user.token);
-        //
-        //     if (user.userProfile) {
-        //         state.userData = user.userProfile;
-        //         localStorage.setItem("user", JSON.stringify(user.userProfile));
-        //         // setTimeout(() => {
-        //         //   removeItem("token");
-        //         //   removeItem("user");
-        //         //   // state.token = null;
-        //         //   // state.userData = null;
-        //         //   navigate("/portal");
-        //         // }, [60000]);
-        //
-        //         navigate("/portal-category/cabinet");
-        //     } else {
-        //         navigate("/registration/register");
-        //     }
-        // },
-        // removeToken: (state) => {
-        //     removeItem("token");
-        //     removeItem("user");
-        //     state.token = null;
-        // },
+      updateSMSRequestTime(state) {
+        state.smsRequestTime = Date.now(); // Update the SMS request time to current timestamp
+      },
     },
     extraReducers: (build) => {
-        // Sign Up
+       
         // build
         //     .addCase(sendEmail.pending, (state) => {
         //         state.loading = true;
@@ -184,25 +145,29 @@ const authSlice = createSlice({
 
         // Update User
         build
-            .addCase(registerUser.pending, (state) => {
-                state.registerLoading = true;
-                state.registerSuccess = null;
-            })
-            .addCase(registerUser.fulfilled, (state, action) => {
-                state.registerLoading = false;
-                state.userData = action.payload;
-                setItem("user", JSON.stringify(action.payload));
-                state.registerSuccess = "success";
-            })
-            .addCase(registerUser.rejected, (state, action) => {
-                state.registerLoading = false;
-                state.error = action.error.message;
-                state.registerSuccess = "error";
-            });
+        .addCase(registerUser.pending, (state) => {
+          state.registrationStatus = 'loading';
+          state.error = null;
+          state.registrationResponse = null;
+        })
+        .addCase(registerUser.fulfilled, (state, action) => {
+          state.registrationStatus = 'succeeded';
+          state.registrationResponse = action.payload;
+          state.user = action.payload;
 
+        })
+        .addCase(registerUser.rejected, (state, action) => {
+          state.registrationStatus = 'failed';
+        state.error = action.error.message;
+        state.registrationResponse = null;
+        })
 
+        
+       
     },
-});
+  });
+  
+  export default authSlice.reducer;
 
-export const { removeToken, loginUser, changeStatus } = authSlice.actions;
-export default authSlice.reducer;
+  export const selectVerificationStatus = (state) => state.user.verificationStatus;
+  

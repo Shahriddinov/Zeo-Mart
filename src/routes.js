@@ -8,6 +8,7 @@ import ScrollTop from "./hoc/ScrollTop";
 
 const Home = lazy(() => import("./page/Home/Home"));
 const Register = lazy(() => import("./page/Register/components/SignUp/SignUp"));
+const Confirm = lazy(() => import("./page/Register/components/Confirm/confirm"));
 const home2 = lazy(() => import("./page/MarketPlace/marketPlace"));
 const Brands = lazy(()=> import("./page/Brands/brands"));
 const Contact = lazy(()=>import("./page/Contact/contact"))
@@ -25,6 +26,7 @@ const routes = [
     {path: "", element: Home},
     {path: "/about", element: About},
     {path: "/register", element: Register},
+    {path: "/confirm", element: Confirm},
     {path: "/brands", element: Brands},
     {path: "/contact", element: Contact},
     {path: "/help", element: Help},

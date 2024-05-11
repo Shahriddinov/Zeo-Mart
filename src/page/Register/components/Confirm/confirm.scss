@@ -1,0 +1,40 @@
+.confirm{
+    display: flex;
+    justify-content: center;
+        margin: 0 auto;
+        flex-direction: column;
+        width: 40%;
+        background: #FFFFFF;
+        border: 1px solid #EAEAEA;
+        box-shadow: 0px 10px 50px rgba(4, 30, 66, 0.05);
+        border-radius: 6px;
+        padding: 40px;
+        margin-top: 40px;
+        background-color: #f8f8f8;
+       
+       &_Ccard{
+      
+        &_labels{
+            font-size: 28px;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            margin: 0 auto;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 5px;
+            color:#041e42;
+            &_otpInput {
+                width: 40px!important;
+                height: 40px;
+                font-size: 16px;
+                text-align: center;
+                margin-right: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+              }
+        }
+        
+       }
+      
+}

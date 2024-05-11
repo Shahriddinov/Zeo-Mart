@@ -20,6 +20,7 @@
     "react-bootstrap": "^2.10.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
+    "react-otp-input": "^3.1.1",
     "react-phone-number-input": "^3.3.9",
     "react-scripts": "5.0.1",
     "sass": "^1.70.0",
@@ -56,6 +57,8 @@
     "libphonenumber-js": "^1.10.57",
     "react-modal": "^3.16.1",
     "react-redux": "^9.1.0",
-    "react-router-dom": "^6.21.3"
+    "react-router-dom": "^6.21.3",
+    "vite-plugin-vuetify": "^2.0.3",
+    "vuetify": "^3.6.3"
   }
 }
